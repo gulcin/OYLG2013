@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Veri Dağıtma Yöntemleri</title>
+
+        <meta name="description" content="">
+        <meta name="author" content="Gülçin Yıldırım">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/tart.css">
+        <link rel="stylesheet" href="css/tartjs-presentation.css">
+        <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+        <link rel="stylesheet" href="lib/css/monokai.css">
+    </head>
+
+    <body>
+        <div class="bg veil"></div>
+        <div id="viewport" >
+    		<div id="world" >
+    		</div>
+    	</div>
+
+        <div class="reveal">
+
+            <!-- Used to fade in a background when a specific slide state is reached -->
+            <div class="state-background"></div>
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section data-state="first"></section>
+                <section class="tightPacked" data-state="intro">
+                    <br/>
+                    <br/>
+                    <h1><span>Veri Dağıtma Yöntemleri</span></h1>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <p>Gülçin Yıldırım, Junior DBA @Tart New Media</p>
+                    <p>Emre Hasegeli, DBA @Tart New Media</p>
+                    <script>
+                        // Delicously hacky. Look away.
+                        if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+                    </script>
+                </section>
+                <section class="trailOff" data-state="two">
+                    <h2>Biz Kimiz?</h2>
+                    <img src="img/chefs/emreHasegeli.png" alt="" style="margin-top: 20px"/>
+                    <img src="img/chefs/gulcinYildirim.png" alt="" style="margin-top: 20px"/>
+                    <p>Tart New Media projelerinin veri tabanı yönetimini yapıyoruz.</p>
+                </section>
+                <section class="tightPacked" >
+                    <section>
+                    	<h2>Müşterilerimiz</h2>
+                    	<img src="img/tut.png" style="width: 400px;" />
+                    	<img src="img/ply.png" style="width: 400px;"/>
+                        <img src="img/productLogos/tutturLogo.png" alt="" style="margin-top: 20px;width: 330px;"/>
+						<img src="img/productLogos/logo.png" alt="" style="margin-top: 20px;width: 300px;padding-bottom: 9px;padding-left: 90px;padding-right: 30px;"/>
+					</section>
+					<section>
+						<h2>Girişimlerimiz</h2>
+						<img src="img/productLogos/isteoyun.png" alt="" style="margin-top: 20px;margin-right: 60px;"/>
+						<img src="img/productLogos/kixel.png" alt="" style="margin-top: 20px;margin-right: 60px;"/>
+                        <img src="img/productLogos/startupK2.png" alt="" style="margin-top: 20px;margin-right: 20px;"/>
+					</section>
+                </section>
+                <section data-state="pastelBlue">
+                    <section>
+						<h2>Nedir? Neden Gerekli?</h2>
+						<img src="img/NedenYeni.png" />
+					</section>
+					<section>
+						<h2>Sorunlar Neler?</h2>
+						<img src="img/problem_solving.jpeg" />
+					</section>
+                </section>
+                <section data-state="brown">
+                    <section>
+						<h2>Açık Kaynak Kodlu Uygulamalar</h2>
+						<img src="img/dbLogos/pg.png" style="width: 220px;"> 
+						<img src="img/dbLogos/mongo.png" style="width: 390px;margin-right: 10px;">
+						<img src="img/dbLogos/my.png" style="width: 240px;margin-bottom: 20px;">
+						<img src="img/dbLogos/rd.png" style="width: 250px;">
+						<img src="img/dbLogos/ldap.png" style="width: 310px;">
+                    </section>
+					<section>
+						<section class="present" style="display: block;">
+						<h2>Ticari Uygulamalar</h2>
+						<img src="img/dbLogos/oracle.jpg" style="width: 400px;"><br/>
+						<img src="img/dbLogos/ms.png" style="width: 300px;margin-top: 30px;">
+					</section>
+					</section>
+					<section>
+                        <h2>PostgreSQL</h2>
+                        <img src="img/dbLogos/pg.png" style="width: 220px;"> 
+                    </section>
+                    <section>
+                        <h2>MongoDB</h2>
+                        <img src="img/dbLogos/mongo.png" style="width: 390px;margin-right: 10px;">
+                    </section>
+                    <section>
+                        <h2>MySQL</h2>
+                        <img src="img/dbLogos/my.png" style="width: 240px;margin-bottom: 20px;">
+                    </section>
+                    <section>
+                        <h2>Redis</h2>
+                        <img src="img/dbLogos/rd.png" style="width: 250px;">
+                    </section>
+                    <section>
+                        <h2>OpenLDAP</h2>
+                        <img src="img/dbLogos/ldap.png" style="width: 310px;">
+                    </section>
+                </section>
+                <section data-state="pastelPurple">
+                    <section>
+                        <h2>Veri Dağıtma Modelleri (Topolojiler)</h2>
+                        <br/>
+                        <p><img src="img/database.png" style="margin: 40; padding: 60; height: 200px;"/><img src="img/rightarrow.png" style="margin: 60; height: 60px;"/><img src="img/database.png" style="margin: 40; padding: 60; height: 200px;"/></p>
+                        <p style="color: black;">Master&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slave</p>
+                    </section>
+                    <section>
+                        <p><img src="img/database.png" style="margin: 40; padding: 60; height: 200px;"/><img src="img/double_arrow.png" style="margin: 60; height: 60px;"/><img src="img/database.png" style="margin: 40; padding: 60; height: 200px;"/></p>
+                        <p style="color: black;">Master&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Master</p>
+                    </section>
+                    <section>
+                        <p><img src="img/database.png" style="height: 200px;"/></p>
+                        <p style="color: black;">Master</p>
+                        <p><img src="img/Arrow_northeast.png" style="margin: 60; height: 80px;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/Arrow_north.svg" style="margin: 60; height: 80px;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/Arrow_northeast.png" style="margin: 60; height: 80px; transform: scaleX(-1); filter: FlipH; -webkit-transform: scaleX(-1);"/></p>
+                        <p><img src="img/database.png" style="margin: 40; padding: 60; height: 200px;"/>&nbsp;&nbsp;&nbsp;<img src="img/database.png" style="margin: 40; padding: 60; height: 200px;"/>&nbsp;&nbsp;&nbsp;<img src="img/database.png" style="margin: 40; padding: 60; height: 200px;"/></p>
+                        <p style="color: black;">Slave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slave&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slave</p>
+                    </section>
+                    <section>
+                        <img src="img/topologies/ringNew.png" style="width: 800px;"/>
+                    </section>
+                     <section>
+                        <img src="img/topologies/ringwithslaves.png" style="width: 800px;"/>
+                    </section>
+                    <section>
+                        <img src="img/topologies/blackhole.png" style="width: 800px;"/>
+                    </section>
+				</section>
+                <section data-state="brightBlue">
+                    <h2>Zamana Göre</h2>
+					<img src="img/timeBased.png" style="width: 900px;"/>
+                </section>
+                <section data-state="darkBlue">
+                    <section>
+                        <h2>Yapısal Olarak</h2>
+						<img src="img/categorizing.png" style="width: 880px;" />
+                    </section>
+					<section>
+						<h2>Paylaşılan Disk Yöntemi ile Veri Kopyalama</h2>
+						<img src="img/structural/1.png" />
+					</section>
+					<section>
+						<h2>Dosya Sistemi Düzeyinde Veri Kopyalama</h2>
+						<img src="img/structural/2.png" />
+					</section>
+					<section>
+						<h2>Tetikleyici Kullanarak Veri Kopyalama</h2>
+						<img src="img/structural/3.png" />
+					</section>
+					<section>
+						<h2>Ara Katman Kullanarak Veri Kopyalama</h2>
+						<img src="img/structural/4.png" />
+					</section>
+					<section>
+						<h2>Sonradan Birleştirme Yöntemi ile Veri Kopyalama</h2>
+						<img src="img/structural/5.png" />
+					</section>
+					<section>
+						<h2>Kayıtları Taşıma Yöntemi ile Veri Kopyalama</h2>
+						<img src="img/structural/6.png" />
+					</section>
+					<section>
+						<h2>Değişiklikleri Gönderme Yöntemi ile Veri Kopyalama</h2>
+						<img src="img/structural/7.png" />
+					</section>
+                </section>
+                <section data-state="orange">
+					<section>
+						<h2>Veri Bölme</h2>
+						<img src="img/shardit.gif" />
+						<blockquote>Veri tabanını parçalamak büyük veri tabanınızı birden çok daha küçük veri tabanlarına ayırmak hiçbir şey paylaştırmadan çoklu sunuculara yaymaktır.</blockquote>
+					</section>
+					<section>
+						<h2>Hiçbir şeyi Paylaşma Yaklaşımı</h2>
+                        <img src="img/ShardReason.gif" />
+						<li>Dikey bölümleme</li>
+						<li>Anahtar tabanlı bölümleme</li>
+						<li>Dizin tabanlı bölümleme</li>
+					</section>
+					<section>
+						<h2>Avantajlar</h2>
+                        <li>Başarım</li>
+                        <li>Ölçeklenebilirlik</li>
+                        <li>Daha küçük veri tabanı daha kolay yönetim</li>
+                        <li>Daha küçük veri tabanı daha hızlı</li>
+                        <li>Maliyeti düşük</li>
+					</section>
+                    <section>
+                        <h2>Dezavantajlar</h2>
+                        <li>SQL yazmak karmaşık</li>
+                        <li>Parçalama kendisi karmaşık</li>
+                        <li>Tek noktada başarısızlık</li>
+                        <li>Yük devretme sunucuları karmaşık</li>
+                        <li>Yedekler karmaşık</li>
+                        <li>İşlemler karmaşık</li>
+                    </section>
+                </section>
+				<section data-state="pastelPurple">
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<h1>Haydi Sor!</h1>
+				</section>
+                <section data-state="pastelRed">
+					<section>
+						<br/>
+						<br/>
+						<h1>Teşekkürler!</h1>
+						<br/>
+						<br/>
+						<p>Gülçin Yıldırım, Tart New Media</p>
+						<p>gulcin.yildirim@tart.com.tr</p>
+						<p>Emre Hasegeli, Tart New Media</p>
+						<p>emre.hasegeli@tart.com.tr</p>
+						<p class="mini">Bu sunum Reveal.js ile hazırlandı.<br/>
+							Bulutlar için www.clicktorelease.com/code/css3dclouds adresinden yararlanıldı</p>
+					</section>
+					<section>
+						<h2>Kaynaklar</h2>
+						<p style="font-size:87%;"><a href="http://www.morganclaypool.com/doi/abs/10.2200/S00296ED1V01Y201008DTM007">Database Replication – Synthesis Lectures on Data Management</a></p>
+<p><a href="http://www.postgresql.org/docs/9.1/static/high-availability.html">High Availability, Load Balancing, and Replication</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Log_shipping">Log Shipping Wiki</a></p>
+<p style="font-size:98%;"><a href="http://blog.gomiso.com/2012/02/13/adventures-in-scaling-part-3-postgresql-streaming-replication/">Adventures in Scaling, PostgreSQL Streaming Replication</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Failover">Failover Wiki</a></p>
+<p><a href="http://en.wikipedia.org/wiki/High-availability_cluster">High Availability Cluster Wiki</a></p>
+<p><a href="http://wiki.postgresql.org/wiki/Binary_Replication_Tutorial">Binary Replication Tutorial</a></p>
+<p><a href="http://www.ahmetkaymaz.com/2008/01/07/sql-server-data-replication-veri-yineleme-i/">SQL Server Data Replication</a></p>
+					</section>
+				</section>
+            </div>
+
+            <!-- The navigational controls UI -->
+            <aside class="controls">
+                <a class="left" href="#">&#x25C4;</a>
+                <a class="right" href="#">&#x25BA;</a>
+                <a class="up" href="#">&#x25B2;</a>
+                <a class="down" href="#">&#x25BC;</a>
+            </aside>
+
+            <!-- Presentation progress bar -->
+            <div class="progress"><span></span></div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+
+        <script>
+            // Load reveal.js as well as a classList polyfill if needed
+            head.js( !document.body.classList ? 'lib/js/classList.js' : null )
+                .js( 'js/reveal.js', function() {
+
+                // Parse the query string into a key/value object
+                var query = {};
+                location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+                    query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+                } );
+
+                // Fires when a slide with data-state=customevent is activated
+                Reveal.addEventListener( 'customevent', function() {
+                    console.log( '"customevent" has fired' );
+                } );
+
+                // Fires each time a new slide is activated
+                Reveal.addEventListener( 'slidechanged', function( event ) {
+                    // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+                } );
+
+                // Full list of configuration options available here:
+                // https://github.com/hakimel/reveal.js#configuration
+                Reveal.initialize({
+                    controls: false,
+                    progress: false,
+                    history: true,
+                    theme: 'tart', // default/neon/beige
+                    transition: 'concave' // default/cube/page/concave/linear(2d)
+                });
+
+                head.js('js/clouds.js');
+
+            } );
+
+            // Load highlight.js for syntax highlighting of code samples
+            head.js( 'lib/js/highlight.js', function() {
+                hljs.initHighlightingOnLoad();
+            } );
+
+            // If we're runnning the notes server we need to include some additional JS
+            // TODO Is there a better way to determine if we're running the notes server?
+            if( window.location.host.indexOf('1947') > -1 ) {
+                head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
+            }
+        </script>
+    </body>
+</html>
